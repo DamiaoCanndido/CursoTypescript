@@ -33,4 +33,5 @@ const colab2 = new Colaborador('Fran', 'Silva');
 empresa1.addColab(colab1);
 empresa1.addColab(colab2);
 
-empresa1.showColabs();
+// empresa1.showColabs();
+console.log(empresa1.name);
