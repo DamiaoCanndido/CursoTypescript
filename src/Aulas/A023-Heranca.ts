@@ -21,8 +21,19 @@ export class Person {
 }
 
 export class Student extends Person {
+
+    constructor(
+        name: string,
+        nick: string,
+        age: number,
+        cpf: string,
+        private room: string
+    ) {
+        super(name, nick, age, cpf);
+    }
+
     getFullName(): string {
-        return `Student: ${this.name} ${this.nick}`;
+        return super.getFullName();
     }
 }
 export class Client extends Person {
@@ -31,8 +42,9 @@ export class Client extends Person {
     }
 }
 
-const std = new Student('Gil', 'Miranda', 23, '12345678901');
+const per = new Person('Nergal', '666', 54, '12345678901');
+const std = new Student('Gil', 'Miranda', 23, '12345678901', 'A');
 const cli = new Client('Maria', 'Miranda', 21, '4658587900');
 
-console.log(std.getFullName())
+console.log(std);
 console.log(cli.getFullName())
